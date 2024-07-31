@@ -5,9 +5,8 @@ This program will display the following information about a given text file:
 -Number of characters
 -Creation date 
 -Last modification date
-To achieve this, we will first need to import the following libraries:
--os
--time
--path
-We also need to get the path of a file. To do this, we can use the "realpath (filename)" command.
-Then, we will need to get the file siz,e number of characters, and creation/modification dates. For this, we will use the libraries we have imported.
+To achieve this, we will need to do the following steps:
+-Implement reading parameters from the command line - we need to read filepath
+-Load the file corresponding to the filepath
+-Read file metadata - we need the file creation date, file modification date, the file size
+-Read file contents - number of characters, maybe we could read the amount of words in the future as well
