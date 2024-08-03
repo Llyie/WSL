@@ -8,7 +8,10 @@ def parse_arguments():
 
 def checkpath(path):
     if os.path.exists(path):
-        print("Valid path!")
+        with open(path) as reader:
+            char = reader.read()
+            print(char)
+            print(len(char))
         return path
     elif os.path.isdir(path):
         raise argparse.ArgumentTypeError(f"This is a directory")
